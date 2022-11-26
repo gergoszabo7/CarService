@@ -1,0 +1,18 @@
+*{
+    background-color: #18181800;
+    margin: 0;
+}
+
+input,mat-label {
+    color:aliceblue;
+}
+
+mat-form-field{
+    margin:auto 2rem;
+    width: 80%;
+    align-items: center;
+}
+
+button{
+    margin: 2rem;
+}

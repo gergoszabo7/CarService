@@ -1,0 +1,57 @@
+{
+  "Cars": [
+    {
+      "brand": "BMW",
+      "model": "320d e90 2009",
+      "id": 1
+    },
+    {
+      "brand": "Toyota",
+      "model": "Yaris 2019",
+      "id": 2
+    },
+    {
+      "brand": "Audi",
+      "model": "A4 2015",
+      "id": 3
+    },
+    {
+      "brand": "Renault",
+      "model": "Talisman 2018",
+      "id": 4
+    }
+  ],
+  "Maintainances": [
+    {
+      "name": "Brake change",
+      "distance": 11000,
+      "cost": 75,
+      "carID": 1,
+      "id": 6
+    },
+    {
+      "name": "Oil change",
+      "distance": 14000,
+      "cost": 95,
+      "carID": 1,
+      "id": 7
+    },
+    {
+      "name": "Brake change",
+      "distance": 13000,
+      "cost": 120,
+      "carID": 1,
+      "id": 8
+    },
+    {
+      "name": "Tyres",
+      "distance": 38000,
+      "cost": 265,
+      "carID": 2,
+      "id": 9
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

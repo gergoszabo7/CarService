@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Add Maintainance Activity</h1>
+<div mat-dialog-content>
+    <form class="example-form" [formGroup]="maintForm">
+        <mat-form-field appearance="fill">
+            <mat-label>Select an option</mat-label>
+            <mat-select formControlName="name" disableRipple>
+              <mat-option *ngFor="let item of maintNames" value={{item}}>{{item}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        <mat-form-field style="width: 60%;" class="example-full-width">
+            <mat-label style="font-size: 0.8rem;">Distance covered since last activity in km</mat-label>
+          <input formControlName="distance" type="number" matInput placeholder="ex.: 9800" value="">
+        </mat-form-field>
+        <span>km</span>
+        <mat-form-field style="width: 60%;" class="example-full-width">
+            <mat-label style="font-size: 0.8rem;">Cost of activity in €</mat-label>
+          <input formControlName="cost" type="number" matInput placeholder="ex.: 9800" value="">
+        </mat-form-field>
+        <span>€</span>
+    </form>
+    <div mat-dialog-action [align]="'center'">
+        <button mat-raised-button color="warn" style="opacity: 0.8" mat-dialog-close>Cancel</button>
+        <button mat-raised-button color="primary" (click)="addMaint()">Add activity</button>
+    </div>  
+</div>

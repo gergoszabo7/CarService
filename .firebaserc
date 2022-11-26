@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "carservice-49f51": {
+      "hosting": {
+        "CarService": [
+          "carservice-49f51"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "carservice-49f51"
+  }
+}

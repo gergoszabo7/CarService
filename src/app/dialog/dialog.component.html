@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Add Car</h1>
+<div mat-dialog-content>
+    <form class="example-form" [formGroup]="carForm">
+        <mat-form-field class="example-full-width">
+          <mat-label>Brand</mat-label>
+          <input formControlName="brand" matInput placeholder="Toyota, BMW, Audi etc." value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Model</mat-label>
+          <input formControlName="model" matInput placeholder="2003 Yaris, 2009 320d e90 etc." value="">
+        </mat-form-field>
+    </form>
+    <div mat-dialog-action [align]="'center'">
+        <button mat-raised-button color="warn" style="opacity: 0.8" mat-dialog-close>Cancel</button>
+        <button mat-raised-button color="primary" (click)="addCar()">Add car</button>
+    </div>  
+</div>
