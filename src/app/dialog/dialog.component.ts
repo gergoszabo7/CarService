@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '../serives/api.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { LocalStorageService } from '../local-storage.service';
 
 @Component({
   selector: 'app-dialog',
@@ -12,9 +13,10 @@ export class DialogComponent implements OnInit {
 
   carForm !: FormGroup
 
-  constructor(private formBuilder: FormBuilder, private api: ApiService, private dialogRef: MatDialogRef<DialogComponent>){}
+  constructor(private formBuilder: FormBuilder, private api: ApiService, private dialogRef: MatDialogRef<DialogComponent>, public LocalStorage:LocalStorageService){}
 
   ngOnInit(): void {
+    this.LocalStorage.ngOnInit();
     this.carForm = this.formBuilder.group({
       brand: ['',Validators.required],
       model: ['',Validators.required]
@@ -35,6 +37,10 @@ export class DialogComponent implements OnInit {
         }
       })
     }
+  }
+
+  addIdx(){
+    this.LocalStorage.add();
   }
 
 }

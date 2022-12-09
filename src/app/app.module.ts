@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
 import { MaintdialComponent } from './maintdial/maintdial.component';
 import {MatSelectModule} from '@angular/material/select';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -38,6 +39,12 @@ import {MatSelectModule} from '@angular/material/select';
     HttpClientModule,
     MatExpansionModule,
     MatSelectModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

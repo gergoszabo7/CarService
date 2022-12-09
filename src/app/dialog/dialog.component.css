@@ -16,3 +16,11 @@ mat-form-field{
 button{
     margin: 2rem;
 }
+
+
+@media only screen and (max-device-width: 750px) {
+    *{
+        width: 85%;
+        margin: 0 auto;
+    }
+}

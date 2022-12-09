@@ -19,6 +19,11 @@
       "brand": "Renault",
       "model": "Talisman 2018",
       "id": 4
+    },
+    {
+      "brand": "Citroen",
+      "model": "C5 2003",
+      "id": 5
     }
   ],
   "Maintainances": [
@@ -49,6 +54,13 @@
       "cost": 265,
       "carID": 2,
       "id": 9
+    },
+    {
+      "name": "Oil change",
+      "distance": 13000,
+      "cost": 85,
+      "carID": 5,
+      "id": 10
     }
   ],
   "profile": {
